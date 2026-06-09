@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #1a2a3a 0%, #0f1a24 100%);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 520px;
+}
+
+.modal {
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.05);
+    padding: 2rem 1.8rem 2rem 1.8rem;
+    transition: all 0.2s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #F6851B, #E2761B);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #1a2c3e;
+}
+
+.warning-text {
+    background: #fff3e0;
+    border-left: 4px solid #f6851b;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.9rem;
+    color: #b85c00;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1f2f3e;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    font-family: 'Inter', monospace;
+    border: 1px solid #cad2d9;
+    border-radius: 16px;
+    resize: vertical;
+    transition: 0.2s;
+    background: #fefefe;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #f6851b;
+    box-shadow: 0 0 0 3px rgba(246,133,27,0.2);
+}
+
+small {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #6c7a8a;
+}
+
+.btn-submit {
+    background: #f6851b;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 40px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+.btn-submit:hover {
+    background: #e2761b;
+    transform: scale(0.98);
+}
+
+.message {
+    background: #e9f5e9;
+    color: #2e6b2e;
+    text-align: center;
+    padding: 12px;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.footer-note {
+    text-align: center;
+    margin-top: 1.8rem;
+    font-size: 0.7rem;
+    color: #8d9aaa;
+    border-top: 1px solid #eef2f5;
+    padding-top: 1rem;
+}

